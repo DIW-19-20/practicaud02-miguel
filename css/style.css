@@ -2,8 +2,17 @@
   Base Element Styles
 ==================================== */
 
+.main-header{
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
 * {
 	box-sizing: border-box;
+}
+
+.main-footer{
+	text-align: center;
 }
 
 body {
@@ -44,11 +53,18 @@ img {
 
 .name {
 	font-size: 1.25em;
+	margin: 0;
 }
 
 .name a,
+
+.main-nav{
+	margin-top: 5px;
+}
 .main-nav a {
 	text-align: center;
+	display: block;
+	padding: 10px 15px;
 }
 
 .main-nav a {
@@ -66,6 +82,13 @@ img {
 .banner {
 	color: #fff;
 	background: #3acec2;
+	padding: 3.2em 0;
+	margin-bottom: 60px;
+}
+
+.col{
+	padding-right: 1em;
+	padding-left: 1em;
 }
 
 .main-footer {
@@ -80,13 +103,43 @@ img {
 	width: 190px;
 }
 
+.headline{
+	margin-bottom: 0;
+}
+
 /* ================================= 
   Media Queries
 ==================================== */
 
 @media (min-width: 769px) {
 
+.container{
+	width:90%;
+	margin: 0 auto;
+}
 
+.name,
+.col	{
+	float: left;
+}
+
+.primary,
+.secondary{
+	width:50%;
+}
+
+.main-nav{
+	float:right;
+}
+
+.main-nav li{
+	display: inline-block;
+	margin-left: 15px;
+}
+
+.tagline{
+	font-size: 1.4em;
+}
 
 	/* ---- Float clearfix ---- */
 
@@ -96,4 +149,21 @@ img {
 		clear: both;
 	}
 
+}
+
+@media (min-width: 1025px){
+
+	.container{
+		width:80%;
+		max-width: 1150px;
+	}
+
+	.primary{
+		width:40%;
+	}
+
+	.secondary, 
+	.tertiary{
+		width:30%;
+	}
 }
